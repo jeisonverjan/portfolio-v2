@@ -1,3 +1,6 @@
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+
 import {
   SiJavascript,
   SiCss3,
@@ -237,7 +240,7 @@ const tagIcons = {
 
 function IconGenerator({ technology }) {
   return (
-    <div>
+    <Flicking defaultIndex={2} horizontal={false} circular={true} bound={false} resizeOnContentsReady={true}>
       {technology.map((tag, index) => {
         const TagIcon = tagIcons[tag].tag;
         const color = tagIcons[tag].color;
@@ -249,7 +252,7 @@ function IconGenerator({ technology }) {
           </div>
         );
       })}
-    </div>
+    </Flicking>
   );
 }
 

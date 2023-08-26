@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   --on-primary: #ffffff;
   --on-secondary: #ffffff;
   --on-background: #253034;
-  --on-surface: #000000;
+  --on-surface: #253034;
   --on-error: #ffffff;
 
   --shadow-sm: 0 0.16rem 0.32rem 0 rgba(0, 0, 0, 0.05);

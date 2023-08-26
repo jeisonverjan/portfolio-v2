@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import SliderTest from "./SliderTest";
 
 const StyledFooter = styled.footer`
   grid-area: footer;
@@ -6,7 +7,7 @@ const StyledFooter = styled.footer`
 `;
 
 function Footer() {
-  return <StyledFooter>FOOTER</StyledFooter>;
+  return <SliderTest />;
 }
 
 export default Footer;

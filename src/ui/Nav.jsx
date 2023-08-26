@@ -10,7 +10,8 @@ const StyledNav = styled.nav`
 `;
 
 const NavList = styled.ul`
-  background-color: var(--primary-variant);
+  background-color: var(--surface);
+  color: var(--on-surface);
   position: absolute;
   top: 8rem;
   left: 0;
@@ -24,6 +25,7 @@ const NavList = styled.ul`
   padding-left: 5%;
   opacity: ${(props) => (props.menuopen === "true" ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
+  backdrop-filter: blur();
 
   li {
     display: ${(props) => (props.menuopen === "false" ? "none" : "block")};
@@ -46,7 +48,7 @@ const NavList = styled.ul`
 
 const StyledNavLink = styled(NavLink)`
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
 
 const NavIcon = styled.button`

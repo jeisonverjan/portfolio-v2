@@ -6,7 +6,10 @@ import Footer from "./Footer";
 
 const StyledAppLayout = styled.div`
   display: grid;
+  width: 100%;
   min-height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
   grid-template:
     "header" 8rem
     "main" auto
