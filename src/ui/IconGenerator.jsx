@@ -1,5 +1,6 @@
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
+import { AutoPlay } from "@egjs/flicking-plugins";
 
 import {
   SiJavascript,
@@ -36,6 +37,7 @@ import {
   SiReacthookform,
   SiStyledcomponents,
 } from "react-icons/si";
+import { styled } from "styled-components";
 
 const tagIcons = {
   javascript: {
@@ -238,21 +240,59 @@ const tagIcons = {
   },
 };
 
-function IconGenerator({ technology }) {
+const StyledFlicking = styled(Flicking)`
+  overflow: hidden;
+  a {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    gap: 0.5rem;
+    background-color: var(--surface);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    font-size: 2.5rem;
+
+    span {
+      color: var(--on-surface);
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+`;
+
+const allSkills = Object.keys(tagIcons);
+
+function IconGenerator({ technology = allSkills }) {
+  const plugins = [
+    new AutoPlay({ duration: 2500, direction: "NEXT", stopOnHover: false }),
+  ];
   return (
-    <Flicking defaultIndex={2} horizontal={false} circular={true} bound={false} resizeOnContentsReady={true}>
+    <StyledFlicking
+      plugins={plugins}
+      moveType="freeScroll"
+      bound={true}
+      circular={true}
+    >
       {technology.map((tag, index) => {
         const TagIcon = tagIcons[tag].tag;
         const color = tagIcons[tag].color;
         const label = tagIcons[tag].label;
+        const link = tagIcons[tag].link;
         return (
-          <div key={index} style={{ color, fontSize: "2rem" }}>
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            key={index}
+            style={{ color }}
+          >
             <TagIcon />
-            <span style={{ fontSize: "1rem", color: "black" }}>{label}</span>
-          </div>
+            <span>{label}</span>
+          </a>
         );
       })}
-    </Flicking>
+    </StyledFlicking>
   );
 }
 

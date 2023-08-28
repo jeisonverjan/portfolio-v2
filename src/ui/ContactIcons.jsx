@@ -11,17 +11,17 @@ const StyledContactIcons = styled.div`
   background-color: var(--surface);
   padding: 1rem 0.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: center;
 
   a {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 0;
     margin: 0;
     padding: 0;
     box-shadow: var(--shadow-sm);
+    color: var(--primary);
   }
 
   a:hover {
@@ -42,13 +42,13 @@ const StyledContactIcons = styled.div`
 function ContactIcons() {
   return (
     <StyledContactIcons>
-      <a href={WHATSAPP_URL} target="blanc">
+      <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
         <BsWhatsapp />
       </a>
-      <a href={LINKEDIN_URL} target="blanc">
+      <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
         <BsLinkedin />
       </a>
-      <a href={GITHUB_URL} target="blanc">
+      <a href={GITHUB_URL} target="_blank" rel="noreferrer">
         <BsGithub />
       </a>
     </StyledContactIcons>

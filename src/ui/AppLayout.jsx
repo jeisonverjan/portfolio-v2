@@ -6,14 +6,14 @@ import Footer from "./Footer";
 
 const StyledAppLayout = styled.div`
   display: grid;
-  width: 100%;
+  max-width: 100%;
   min-height: 100dvh;
   max-height: 100dvh;
-  overflow: hidden;
+  //overflow: hidden;
   grid-template:
     "header" 8rem
     "main" auto
-    "footer" 10%;
+    "footer" 6rem / 100%;
 `;
 
 function AppLayout() {

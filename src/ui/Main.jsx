@@ -23,9 +23,9 @@ const StyledMain = styled.main`
     }
     .name {
       font-family: "Rubik", sans-serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      letter-spacing: 0.2rem;
+      letter-spacing: 0.1rem;
       display: flex;
       gap: 1rem;
     }
@@ -35,9 +35,9 @@ const StyledMain = styled.main`
     display: grid;
     //justify-content: center;
     overflow: hidden;
-    margin-top: -2rem;
+    margin-top: -3rem;
     img {
-      width: 240px;
+      width: 280px;
       height: 100%;
       background-color: transparent;
       filter: drop-shadow(0.2rem 0rem 0.3rem var(--primary));
@@ -73,7 +73,8 @@ const StyledMain = styled.main`
       img {
         z-index: 1;
         margin: 0 auto;
-        width: 360px;
+        width: 39rem;
+        height: 100%;
         grid-area: 1 / 1 / 2 / 2;
       }
     }

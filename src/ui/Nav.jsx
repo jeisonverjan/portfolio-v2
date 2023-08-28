@@ -10,26 +10,19 @@ const StyledNav = styled.nav`
 `;
 
 const NavList = styled.ul`
+  position: fixed;
   background-color: var(--surface);
   color: var(--on-surface);
-  position: absolute;
   top: 8rem;
-  left: 0;
-  right: 0;
   bottom: 0;
-  padding: 0;
+  width: 100%;
   padding-top: 1rem;
   display: grid;
   align-content: start;
   gap: 2em;
   padding-left: 5%;
-  opacity: ${(props) => (props.menuopen === "true" ? 1 : 0)};
-  transition: opacity 0.5s ease-in-out;
-  backdrop-filter: blur();
-
-  li {
-    display: ${(props) => (props.menuopen === "false" ? "none" : "block")};
-  }
+  left: ${(props) => (props.menuopen === "true" ? "0" : "-100%")};
+  transition: left 0.4s ease-in-out;
 
   @media (min-width: 768px) {
     background-color: var(--background);
@@ -57,6 +50,7 @@ const NavIcon = styled.button`
   border: none;
   font-size: 3rem;
   display: grid;
+
   @media (min-width: 768px) {
     display: none;
   }
