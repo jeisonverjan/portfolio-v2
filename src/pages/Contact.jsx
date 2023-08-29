@@ -1,7 +1,7 @@
-import SliderTest from "../ui/SliderTest";
+import ContactContainer from "../ui/ContactContainer";
 
 function Contact() {
-  return <div>Contact</div>;
+  return <ContactContainer></ContactContainer>;
 }
 
 export default Contact;

@@ -1,9 +1,7 @@
+import AboutMeContainer from "../ui/AboutMeContainer";
+
 function AboutMe() {
-    return (
-        <div>
-            About ME
-        </div>
-    )
+  return <AboutMeContainer />;
 }
 
-export default AboutMe
+export default AboutMe;

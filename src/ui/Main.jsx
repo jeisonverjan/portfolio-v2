@@ -41,7 +41,7 @@ const StyledMain = styled.main`
       height: 100%;
       background-color: transparent;
       filter: drop-shadow(0.2rem 0rem 0.3rem var(--primary));
-      object-fit: cover;
+      //object-fit: cover;
     }
   }
 
@@ -73,7 +73,7 @@ const StyledMain = styled.main`
       img {
         z-index: 1;
         margin: 0 auto;
-        width: 39rem;
+        width: 40rem;
         height: 100%;
         grid-area: 1 / 1 / 2 / 2;
       }

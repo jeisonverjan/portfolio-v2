@@ -13,7 +13,7 @@ const StyledAppLayout = styled.div`
   grid-template:
     "header" 8rem
     "main" auto
-    "footer" 6rem / 100%;
+    "footer" 5rem / 100%;
 `;
 
 function AppLayout() {
