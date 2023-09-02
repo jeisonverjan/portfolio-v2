@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import SwitchMode from "./SwitchMode";
 
 const StyledHeader = styled.header`
-  z-index: 1;
+  z-index: 2;
   grid-area: header;
   display: grid;
   place-content: center;
@@ -12,6 +12,9 @@ const StyledHeader = styled.header`
   grid-template: "menu logo switch";
   background-color: var(--background);
   box-shadow: var(--shadow-sm);
+  position: fixed;
+  height: 8rem;
+  width: 100%;
 
   @media (min-width: 768px) {
     grid-template: "logo menu switch";

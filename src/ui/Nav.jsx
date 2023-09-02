@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
 const StyledNav = styled.nav`
+  z-index: 2;
   grid-area: menu;
   display: grid;
   grid-template-columns: repeat(2, max-content);

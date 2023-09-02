@@ -9,6 +9,7 @@ const StyledMain = styled.main`
     "contactIcons photo" / 1fr 1.2fr;
   background-color: var(--surface);
   color: var(--on-surface);
+  height: 100%;
 
   .greeting {
     grid-area: greeting;
@@ -71,7 +72,7 @@ const StyledMain = styled.main`
         clip-path: polygon(100% 1%, 0 0, 100% 100%);
       }
       img {
-        z-index: 1;
+        z-index: 3;
         margin: 0 auto;
         width: 40rem;
         height: 100%;

@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
   --on-background: #253034;
   --on-surface: #253034;
   --on-error: #ffffff;
+  --blue-thumb: #2187EC;
+  --red-heart: #E13C5C;
 
   --shadow-sm: 0 0.16rem 0.32rem 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 0.64rem 0.96rem -0.16rem rgba(0, 0, 0, 0.1),

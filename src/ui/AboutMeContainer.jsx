@@ -13,6 +13,7 @@ const StyledContainer = styled.div`
   grid-template:
     "description"
     "buttons";
+  height: 100%;
 
   .description {
     grid-area: description;

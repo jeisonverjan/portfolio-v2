@@ -8,6 +8,7 @@ const StyledContactContainer = styled.form`
   display: grid;
   gap: 0.7rem;
   padding: 2rem;
+  height: 100%;
 
   input,
   textarea {

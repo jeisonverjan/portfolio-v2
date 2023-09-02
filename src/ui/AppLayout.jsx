@@ -16,12 +16,18 @@ const StyledAppLayout = styled.div`
     "footer" 5rem / 100%;
 `;
 
+const Main = styled.div`
+  grid-area: main;
+`;
+
 function AppLayout() {
   return (
     <div>
       <StyledAppLayout>
         <Header />
-        <Outlet />
+        <Main>
+          <Outlet />
+        </Main>
         <Footer />
       </StyledAppLayout>
     </div>
