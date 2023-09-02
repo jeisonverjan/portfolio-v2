@@ -19,7 +19,7 @@ const StyledContactContainer = styled.form`
   }
 
   textarea {
-    resize: vertical;
+    resize: none;
     padding-top: 1rem;
   }
 

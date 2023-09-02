@@ -1,5 +1,7 @@
+import ProjectsContainer from "../ui/ProjectsContainer";
+
 function projects() {
-  return <div>Projects</div>;
+  return <ProjectsContainer />;
 }
 
 export default projects;
