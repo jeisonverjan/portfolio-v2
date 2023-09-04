@@ -108,10 +108,10 @@ function AboutMeContainer() {
         <img src="/public/aboutMe.png" alt="one and zero circle" />
       </div>
       <div className="buttons">
-        <ButtonLink text="Resume">
+        <ButtonLink text="Resume" type="primary" size="medium">
           <BsDownload />
         </ButtonLink>
-        <ButtonLink text="E-mail">
+        <ButtonLink text="E-mail" type="primary" size="medium">
           <MdEmail />
         </ButtonLink>
       </div>

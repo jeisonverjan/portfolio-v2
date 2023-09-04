@@ -6,7 +6,7 @@ const StyledLogo = styled.span`
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 3rem;
 `;
 
 function Logo() {

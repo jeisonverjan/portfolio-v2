@@ -11,13 +11,21 @@ const StyledAppLayout = styled.div`
   max-height: 100dvh;
   //overflow: hidden;
   grid-template:
-    "header" 8rem
+    "header" 15rem
     "main" auto
-    "footer" 5rem / 100%;
+    "footer" 8rem / 100%;
+
+  @media (min-width: 768px) {
+    grid-template:
+      "header" 8rem
+      "main" auto
+      "footer" 5rem / 100%;
+  }
 `;
 
 const Main = styled.div`
   grid-area: main;
+  background-color: var(--surface);
 `;
 
 function AppLayout() {

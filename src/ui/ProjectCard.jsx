@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import SocialButtons from "./SocialButtons";
 import ProjectLinks from "./ProjectLinks";
 import ProjectReactions from "./ProjectReactions";
+import ProjectInfo from "./ProjectInfo";
+import TextReducer from "./TextReducer";
 
 const StyledProjectCard = styled.div`
   box-shadow: var(--shadow-lg);
@@ -25,7 +27,7 @@ const StyledProjectCard = styled.div`
       transition: all 0.3s ease-in-out;
     }
   }
-  .project-info {
+  /* .project-info {
     margin-top: 0.5rem;
     text-align: center;
     padding: 0rem 2rem;
@@ -42,7 +44,7 @@ const StyledProjectCard = styled.div`
       font-weight: 600;
       font-family: inherit;
     }
-  }
+  } */
 `;
 
 function ProjectCard({ project }) {
@@ -54,11 +56,11 @@ function ProjectCard({ project }) {
         </a>
       </div>
       <SocialButtons />
-      <div className="project-info">
+      <ProjectInfo>
         <h1>{project.name}</h1>
-        <p>{project.shortDescription}</p>
-      </div>
-      <ProjectLinks />
+        <TextReducer>{project.shortDescription}</TextReducer>
+      </ProjectInfo>
+      <ProjectLinks project={project} />
       <ProjectReactions />
     </StyledProjectCard>
   );

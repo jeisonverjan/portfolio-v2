@@ -14,7 +14,7 @@ const NavList = styled.ul`
   position: fixed;
   background-color: var(--surface);
   color: var(--on-surface);
-  top: 8rem;
+  top: 15rem;
   bottom: 0;
   width: 100%;
   padding-top: 1rem;
@@ -42,14 +42,18 @@ const NavList = styled.ul`
 
 const StyledNavLink = styled(NavLink)`
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 3rem;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const NavIcon = styled.button`
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: 4rem;
   display: grid;
 
   @media (min-width: 768px) {

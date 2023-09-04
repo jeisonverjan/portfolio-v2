@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   background-color: var(--background);
   box-shadow: var(--shadow-sm);
   position: fixed;
-  height: 8rem;
+  height: 15rem;
   width: 100%;
 
   @media (min-width: 768px) {
@@ -21,6 +21,7 @@ const StyledHeader = styled.header`
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
     padding: 0 5rem;
+    height: 8rem;
   }
 `;
 

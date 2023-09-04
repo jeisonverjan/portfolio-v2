@@ -16,7 +16,7 @@ const StyledContactIcons = styled.div`
   justify-content: center;
 
   a {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 0;
     margin: 0;
     padding: 0;

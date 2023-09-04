@@ -31,8 +31,8 @@ const StyledContactContainer = styled.form`
 
   .button {
     display: flex;
-    max-height: 1rem;
-    margin: 2rem 0rem 2rem;
+    height: 4rem;
+    //margin: 50rem 0rem 0rem;
   }
 
   h1 {
@@ -68,7 +68,7 @@ function ContactContainer() {
       <input className="subject" type="text" placeholder="Subject" required />
       <textarea placeholder="Message" required />
       <div className="button">
-        <ButtonLink text="Send Message">
+        <ButtonLink text="Send Message" type="primary" size="medium">
           <TbMailForward />
         </ButtonLink>
       </div>

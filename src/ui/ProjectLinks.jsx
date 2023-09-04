@@ -1,21 +1,32 @@
+import { useNavigate } from "react-router-dom";
 import ButtonLink from "./ButtonLink";
 import { styled } from "styled-components";
 
 const StyledProjectLinks = styled.div`
   display: flex;
-  //background-color: red;
   padding: 2rem;
   justify-content: space-around;
 `;
 
-const StyledButtonLink = styled(ButtonLink)``;
-
-function ProjectLinks() {
+function ProjectLinks({ project }) {
+  const navigate = useNavigate();
   return (
     <StyledProjectLinks>
-      <StyledButtonLink>More</StyledButtonLink>
-      <StyledButtonLink>Visit</StyledButtonLink>
-      <StyledButtonLink>Code</StyledButtonLink>
+      <ButtonLink
+        text="show more"
+        type="secondary"
+        onClick={() => navigate(`/projects/${project.id}`)}
+      ></ButtonLink>
+      <ButtonLink
+        text="visit site"
+        type="secondary"
+        href={project.projectLink}
+      ></ButtonLink>
+      <ButtonLink
+        text="source code"
+        type="secondary"
+        href={project.projectCode}
+      ></ButtonLink>
     </StyledProjectLinks>
   );
 }

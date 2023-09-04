@@ -23,14 +23,14 @@ const StyledButton = styled.button`
   }
 `;
 
-function SocialButtons() {
+function SocialButtons({ padding, fontSize }) {
   return (
     <StyledSocialButtons>
       <StyledButton>
-        <SocialIcon type="like" />
+        <SocialIcon type="like" padding={padding} fontSize={fontSize} />
       </StyledButton>
       <StyledButton>
-        <SocialIcon type="love" />
+        <SocialIcon type="love" padding={padding} fontSize={fontSize} />
       </StyledButton>
     </StyledSocialButtons>
   );

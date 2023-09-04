@@ -251,12 +251,21 @@ const StyledFlicking = styled(Flicking)`
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-lg);
-    font-size: 2.5rem;
+    font-size: 5rem;
 
     span {
       color: var(--on-surface);
-      font-size: 1.3rem;
+      font-size: 2.2rem;
       font-weight: bold;
+    }
+  }
+  @media (min-width: 768px) {
+    a {
+      font-size: 2.5rem;
+    }
+
+    span {
+      font-size: 1.3rem;
     }
   }
 `;

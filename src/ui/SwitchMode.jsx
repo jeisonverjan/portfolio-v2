@@ -15,9 +15,9 @@ const StyledSwitchMode = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.5rem;
-    width: 55px;
-    height: 30px;
+    font-size: 1.9rem;
+    width: 70px;
+    height: 45px;
     border-radius: 100px;
     cursor: pointer;
     position: relative;
@@ -26,8 +26,8 @@ const StyledSwitchMode = styled.div`
       position: absolute;
       content: "";
       background-color: var(--on-secondary);
-      width: 22px;
-      height: 22px;
+      width: 35px;
+      height: 35px;
       border-radius: 100px;
       top: 4px;
       left: ${(props) => (props.isdarkmode === "false" ? "5px" : "28px")};

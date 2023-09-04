@@ -6,7 +6,7 @@ const StyledMain = styled.main`
   grid-template:
     "greeting greeting" 30%
     "profession photo"
-    "contactIcons photo" / 1fr 1.2fr;
+    "contactIcons photo" / 1fr 3fr;
   background-color: var(--surface);
   color: var(--on-surface);
   height: 100%;
@@ -20,11 +20,11 @@ const StyledMain = styled.main`
     text-align: center;
 
     .greet {
-      font-size: 2rem;
+      font-size: 3.5rem;
     }
     .name {
       font-family: "Rubik", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       font-weight: 700;
       letter-spacing: 0.1rem;
       display: flex;
@@ -49,11 +49,13 @@ const StyledMain = styled.main`
   .profession {
     grid-area: profession;
     font-family: "Rubik";
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 2.5rem;
     font-weight: bolder;
-    padding: 0rem;
+    padding: 1rem 0.5rem;
     text-align: center;
     line-height: 0.8;
   }
@@ -92,11 +94,13 @@ const StyledMain = styled.main`
         flex-direction: column;
         line-height: 1;
         font-weight: 900;
+        text-transform: uppercase;
       }
     }
     .profession {
-      display: flex;
+      justify-content: center;
       gap: 0.5rem;
+      font-size: 4rem;
     }
   }
 `;
