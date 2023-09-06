@@ -27,24 +27,6 @@ const StyledProjectCard = styled.div`
       transition: all 0.3s ease-in-out;
     }
   }
-  /* .project-info {
-    margin-top: 0.5rem;
-    text-align: center;
-    padding: 0rem 2rem;
-    display: grid;
-    gap: 1rem;
-    color: var(--on-surface);
-    h1 {
-      font-family: "Rubik";
-      text-transform: uppercase;
-      font-size: 2.5rem;
-    }
-    p {
-      text-align: justify;
-      font-weight: 600;
-      font-family: inherit;
-    }
-  } */
 `;
 
 function ProjectCard({ project }) {

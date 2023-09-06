@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import IconGenerator from "./IconGenerator";
+import IconSlider from "./IconSlider";
 
 const StyledFooter = styled.footer`
   grid-area: footer;
@@ -11,7 +11,7 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter>
-      <IconGenerator />
+      <IconSlider />
     </StyledFooter>
   );
 }

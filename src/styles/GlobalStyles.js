@@ -38,6 +38,7 @@ const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
   min-height: 100dvh;
+  background-color: lightblue;
 }
 
 body {
@@ -47,6 +48,8 @@ body {
   min-height: 100dvh;
   line-height: 1.5;
   font-size: 1.6rem;
+  background-color: lightgreen;
+  
 }
 
 input,

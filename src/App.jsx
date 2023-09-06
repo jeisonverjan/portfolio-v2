@@ -16,10 +16,10 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="projects" element={<Projects />} />
-            <Route path="projects/:bookingId" element={<Project />} />
             <Route path="about" element={<AboutMe />} />
             <Route path="contact" element={<Contact />} />
           </Route>
+          <Route path="projects/:bookingId" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -5,12 +5,13 @@ const StyledProjectReactions = styled.div`
   display: flex;
   justify-content: flex-end;
   gap: 1.2rem;
-  margin: 0rem 2rem 2rem;
+  //margin: 0rem 2rem 2rem;
+  //background-color: red;
+  padding: 0.5rem;
 `;
 
 const ReactionContainer = styled.div`
   display: flex;
-  //background-color: red;
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;

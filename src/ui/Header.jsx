@@ -13,6 +13,7 @@ const StyledHeader = styled.header`
   background-color: var(--background);
   box-shadow: var(--shadow-sm);
   position: fixed;
+  top: 0%;
   height: 15rem;
   width: 100%;
 
@@ -23,6 +24,7 @@ const StyledHeader = styled.header`
     padding: 0 5rem;
     height: 8rem;
   }
+
 `;
 
 function Header() {
