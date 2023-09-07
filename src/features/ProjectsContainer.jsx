@@ -1,21 +1,27 @@
 import { styled } from "styled-components";
-import Filter from "./Filter";
+import Filter from "../ui/Filter";
 import ProjectGallery from "./ProjectGallery";
+import ProjectSlider from "../features/ProjectSlider";
+import { useSearchParams } from "react-router-dom";
 
 const StyledProjectsContainer = styled.div`
   background-color: var(--surface);
   color: var(--on-surface);
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 function ProjectsContainer() {
+  const [searchParams] = useSearchParams();
+  const currentView = searchParams.get("view") || "slider";
+
   return (
     <StyledProjectsContainer>
       <h1>Projects</h1>
       <Filter />
-      <ProjectGallery />
+      {currentView === "slider" && <ProjectSlider />}
+      {currentView === "gallery" && <ProjectGallery />}
     </StyledProjectsContainer>
   );
 }

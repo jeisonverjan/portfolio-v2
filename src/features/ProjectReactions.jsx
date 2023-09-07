@@ -1,12 +1,10 @@
 import { styled } from "styled-components";
-import SocialIcon from "./SocialIcon";
+import SocialIcon from "../ui/SocialIcon";
 
 const StyledProjectReactions = styled.div`
   display: flex;
   justify-content: flex-end;
   gap: 1.2rem;
-  //margin: 0rem 2rem 2rem;
-  //background-color: red;
   padding: 0.5rem;
 `;
 
@@ -18,18 +16,18 @@ const ReactionContainer = styled.div`
   gap: 0.1rem;
 `;
 
-function ProjectReactions() {
+function ProjectReactions({ loves, likes }) {
   return (
     <StyledProjectReactions>
       <ReactionContainer>
         <SocialIcon type="like" fontSize="1.5rem" padding="0.5rem" />
         <span></span>
-        <span>450K</span>
+        <span>{likes}</span>
       </ReactionContainer>
       <ReactionContainer>
         <SocialIcon type="love" fontSize="1.5rem" padding="0.5rem" />
         <span></span>
-        <span>50K</span>
+        <span>{loves}</span>
       </ReactionContainer>
     </StyledProjectReactions>
   );

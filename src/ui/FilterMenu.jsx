@@ -4,7 +4,6 @@ import styled, { css } from "styled-components";
 const StyledFilterMenu = styled.div`
   display: flex;
   gap: 2rem;
-  padding-bottom: 1.5rem;
 `;
 
 const ButtonFilter = styled.button`
@@ -32,7 +31,6 @@ function FilterMenu({ options, currentFilter }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClick(value) {
-    console.log("clicked");
     searchParams.set("filter", value);
     setSearchParams(searchParams);
   }

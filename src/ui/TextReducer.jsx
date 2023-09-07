@@ -14,6 +14,11 @@ const StyledTextReducer = styled.p`
       filter: brightness(0.8);
     }
   }
+
+  @media (min-width: 768px) {
+    line-height: 1.5;
+    font-size: 5px;
+  }
 `;
 
 function TextReducer({ children, numberWords }) {
@@ -22,7 +27,7 @@ function TextReducer({ children, numberWords }) {
 
   return (
     <StyledTextReducer>
-      {!showMore ? textReduced : children}.
+      {!showMore ? textReduced : children}
       {numberWords && (
         <span onClick={() => setShowMore(!showMore)}>
           {showMore ? "Show less" : "Show More..."}

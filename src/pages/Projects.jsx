@@ -1,7 +1,7 @@
-import ProjectsContainer from "../ui/ProjectsContainer";
+import ProjectsContainer from "../features/ProjectsContainer";
 
-function projects() {
+function Projects() {
   return <ProjectsContainer />;
 }
 
-export default projects;
+export default Projects;

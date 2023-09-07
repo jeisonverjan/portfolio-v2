@@ -41,12 +41,7 @@ function IconSlider({ technology = allSkills }) {
     new AutoPlay({ duration: 2500, direction: "NEXT", stopOnHover: false }),
   ];
   return (
-    <StyledFlicking
-      plugins={plugins}
-      moveType="freeScroll"
-      bound={true}
-      circular={true}
-    >
+    <StyledFlicking plugins={plugins} moveType="freeScroll" circular={true}>
       {technology.map((tag, index) => {
         const TagIcon = tagIcons[tag].tag;
         const color = tagIcons[tag].color;

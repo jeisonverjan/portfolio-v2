@@ -1,11 +1,13 @@
-import { styled } from "styled-components";
-import SocialButtons from "./SocialButtons";
-import TextReducer from "./TextReducer";
-import ProjectInfo from "./ProjectInfo";
-import SkillsIcons from "./SkillsIcons";
-import { TiArrowBack } from "react-icons/ti";
-import ProjectReactions from "./ProjectReactions";
 import { useNavigate } from "react-router-dom";
+import { styled } from "styled-components";
+import { TiArrowBack } from "react-icons/ti";
+
+import SocialButtons from "../ui/SocialButtons";
+import TextReducer from "../ui/TextReducer";
+import SkillsIcons from "../ui/SkillsIcons";
+
+import ProjectReactions from "./ProjectReactions";
+import ProjectInfo from "./ProjectInfo";
 
 const project = {
   id: 14,

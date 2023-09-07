@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import ButtonLink from "./ButtonLink";
 import { styled } from "styled-components";
+import ButtonLink from "../ui/ButtonLink";
 
 const StyledProjectLinks = styled.div`
   display: flex;

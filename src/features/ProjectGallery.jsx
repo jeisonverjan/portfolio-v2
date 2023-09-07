@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import ProjectCard from "./ProjectCard";
-import { projects } from "../data/projects";
+import { useGetProjects } from "./useGetProjects";
+import Spinner from "../ui/Spinner";
 
 const StyledProjectGallery = styled.div`
   display: grid;
@@ -10,6 +11,8 @@ const StyledProjectGallery = styled.div`
 `;
 
 function ProjectGallery() {
+  const { isLoading, data: projects } = useGetProjects();
+  if (isLoading) return <Spinner />;
   return (
     <StyledProjectGallery>
       {projects.map((project) => (

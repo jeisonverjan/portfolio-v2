@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Header from "../ui/Header";
-import ProjectContainer from "../ui/ProjectContainer";
+import ProjectContainer from "../features/ProjectContainer";
 
 const StyledProject = styled.div`
   background-color: var(--surface);
