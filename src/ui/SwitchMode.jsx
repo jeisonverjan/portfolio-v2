@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { styled } from "styled-components";
 import { BsSun } from "react-icons/bs";
 import { BsMoonStars } from "react-icons/bs";
+import { useDarkMode } from "../context/DarkModeContext";
 
 const StyledSwitchMode = styled.div`
   grid-area: switch;
@@ -34,15 +34,12 @@ const StyledSwitchMode = styled.div`
       transition: 0.4s;
     }
   }
-
 `;
 
 function SwitchMode() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  //const [isDarkModeLocal, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-  function toggleDarkMode() {
-    setIsDarkMode(!isDarkMode);
-  }
 
   return (
     <StyledSwitchMode isdarkmode={String(isDarkMode)}>

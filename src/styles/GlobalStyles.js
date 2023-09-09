@@ -2,25 +2,54 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
+
+  &, &.light-mode{
+    --primary: #622aff;
+    --primary-variant: #dccfed;
+    --secondary: #331c52;
+    --background: #ffffff;
+    --surface: #e1ebed;
+    --error: #b00020;
+    --on-primary: #ffffff;
+    --on-secondary: #ffffff;
+    --on-background: #253034;
+    --on-surface: #253034;
+    --on-error: #ffffff;
+    --blue-thumb: #2187EC;
+    --red-heart: #E13C5C;
+    
+    --shadow-sm: 0 0.16rem 0.32rem 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 0.64rem 0.96rem -0.16rem rgba(0, 0, 0, 0.1),
+    0 0.32rem 0.64rem -0.16rem rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 1.6rem 2.4rem -0.48rem rgba(0, 0, 0, 0.1),
+    0 0.64rem 0.96rem -0.32rem rgba(0, 0, 0, 0.05);
+
+    color-scheme: light;
+  }
+    
+   &.dark-mode{
   --primary: #622aff;
-  --primary-variant: #dccfed;
-  --secondary: #331c52;
-  --background: #ffffff;
-  --surface: #e1ebed;
-  --error: #b00020;
+  --primary-variant: #331c52;
+  --secondary: #dccfed;
+  --background: #291c3a;
+  --surface: #331c52;
+  --error: #cf6679;
   --on-primary: #ffffff;
-  --on-secondary: #ffffff;
-  --on-background: #253034;
-  --on-surface: #253034;
-  --on-error: #ffffff;
+  --on-secondary: #253034;
+  --on-background: #e1ebed;
+  --on-surface: #e1ebed;
+  --on-error: #242424;
   --blue-thumb: #2187EC;
   --red-heart: #E13C5C;
 
-  --shadow-sm: 0 0.16rem 0.32rem 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 0.64rem 0.96rem -0.16rem rgba(0, 0, 0, 0.1),
-    0 0.32rem 0.64rem -0.16rem rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 1.6rem 2.4rem -0.48rem rgba(0, 0, 0, 0.1),
-    0 0.64rem 0.96rem -0.32rem rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 0.16rem 0.32rem 0 rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 0.64rem 0.96rem -0.16rem rgba(255, 255, 255, 0.1),
+    0 0.32rem 0.64rem -0.16rem rgba(255, 255, 255, 0.06);
+  --shadow-lg: 0 1.6rem 2.4rem -0.48rem rgba(255, 255, 255, 0.1),
+    0 0.64rem 0.96rem -0.32rem rgba(255, 255, 255, 0.05);
+
+    color-scheme: dark;
+  }
 }
 
 
@@ -50,6 +79,10 @@ body {
   font-size: 1.6rem;
   background-color: lightgreen;
   
+}
+
+form {
+  color-scheme: light;
 }
 
 input,

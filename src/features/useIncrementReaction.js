@@ -1,13 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { incrementLoves } from "../services/apiProject";
+import { incrementReaction } from "../services/apiProject";
 
-export function useIncrementLoves() {
+export function useIncrementReaction() {
   const queryClient = useQueryClient();
   const { isLoading, mutate: updateLoves } = useMutation({
-    mutationFn: ({ projectId, type }) => incrementLoves(projectId, type),
+    mutationFn: ({ projectId, type }) => incrementReaction(projectId, type),
     onSuccess: () => {
       console.log("success!!!!!");
-      queryClient.invalidateQueries({ queryKey: ["projects"] });
+      queryClient.invalidateQueries({ active: true });
     },
   });
 

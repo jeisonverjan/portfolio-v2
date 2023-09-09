@@ -24,7 +24,28 @@ export async function getProjects() {
   }
 }
 
-export async function incrementLoves(projectId, type) {
+export async function getProjectById(projectId) {
+  try {
+    const projectRef = ref(db, `${projectId}`);
+    const snapshot = await get(projectRef);
+
+    if (snapshot.exists()) {
+      const projectData = snapshot.val();
+      return {
+        id: snapshot.key,
+        ...projectData,
+      };
+    } else {
+      console.log("The project id does not exist!");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error while getting project by ID from firebase", error);
+    throw error;
+  }
+}
+
+export async function incrementReaction(projectId, type) {
   try {
     // 1, get the reference of the project
     const projectRef = ref(db, `${projectId}`);

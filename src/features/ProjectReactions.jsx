@@ -14,6 +14,7 @@ const ReactionContainer = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   gap: 0.1rem;
+  color: var(--on-surface);
 `;
 
 function ProjectReactions({ loves, likes }) {

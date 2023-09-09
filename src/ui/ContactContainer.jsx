@@ -5,56 +5,71 @@ import { TbMailForward } from "react-icons/tb";
 const StyledContactContainer = styled.form`
   background-color: var(--surface);
   color: var(--on-surface);
-  display: grid;
-  gap: 0.7rem;
   padding: 2rem;
+  width: 100%;
   height: 100%;
-
-  input,
-  textarea {
-    border: none;
-    border-radius: 1rem;
-    padding: 0rem 3rem;
-    box-shadow: var(--shadow-lg);
-    font-family: inherit;
-  }
-
-  textarea {
-    resize: none;
-    padding-top: 1rem;
-  }
-
-  input:focus,
-  textarea:focus {
-    outline-color: var(--primary);
-  }
-
-  .button {
-    display: flex;
-    height: 4rem;
-    //margin: 50rem 0rem 0rem;
-  }
 
   h1 {
     line-height: 1;
   }
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 30%);
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    img {
+      display: none;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 2rem;
+
+    input,
     textarea {
-      grid-column: 1 / span 2;
-      max-height: 15rem;
+      border: none;
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      box-shadow: var(--shadow-lg);
+      font-family: inherit;
+      width: 100%;
     }
-    h1 {
-      grid-column: 1 / span 2;
+
+    textarea {
+      resize: none;
+      padding-top: 2.5rem;
+      height: 15rem;
     }
-    .subject {
-      grid-column: 1 / span 2;
+
+    input:focus,
+    textarea:focus {
+      outline-color: var(--primary);
     }
+
     .button {
-      margin-top: 0;
+      display: flex;
+      height: 4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 `;
@@ -63,14 +78,24 @@ function ContactContainer() {
   return (
     <StyledContactContainer>
       <h1>Contact</h1>
-      <input type="text" placeholder="Full Name" required />
-      <input type="mail" placeholder="E-mail Address" required />
-      <input className="subject" type="text" placeholder="Subject" required />
-      <textarea placeholder="Message" required />
-      <div className="button">
-        <ButtonLink text="Send Message" type="primary" size="medium">
-          <TbMailForward />
-        </ButtonLink>
+      <div className="container">
+        <img src="/public/contactImg.png" alt="html label" />
+        <form>
+          <input type="text" placeholder="Full Name" required />
+          <input type="mail" placeholder="E-mail Address" required />
+          <input
+            className="subject"
+            type="text"
+            placeholder="Subject"
+            required
+          />
+          <textarea placeholder="Message" required />
+          <div className="button">
+            <ButtonLink text="Send Message" type="primary" size="medium">
+              <TbMailForward />
+            </ButtonLink>
+          </div>
+        </form>
       </div>
     </StyledContactContainer>
   );

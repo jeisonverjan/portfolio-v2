@@ -1,4 +1,4 @@
-import { useIncrementLoves } from "../features/useIncrementLoves";
+import { useIncrementReaction } from "../features/useIncrementReaction";
 import { styled } from "styled-components";
 
 import SocialIcon from "./SocialIcon";
@@ -29,7 +29,7 @@ const StyledButton = styled.button`
 `;
 
 function SocialButtons({ projectId, padding, fontSize }) {
-  const { isLoading, updateLoves } = useIncrementLoves();
+  const { isLoading, updateLoves } = useIncrementReaction();
 
   if (isLoading) return <Spinner />;
 

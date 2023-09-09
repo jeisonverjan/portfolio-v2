@@ -4,10 +4,11 @@ import { styled } from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { useGetProjects } from "./useGetProjects";
 import Spinner from "../ui/Spinner";
+import { useSearchParams } from "react-router-dom";
 
 const StyledFlicking = styled.div`
   width: 100%;
-  height: auto;
+  min-height: 100%;
   margin: 0 auto;
   display: grid;
   place-content: center;
@@ -25,13 +26,32 @@ const StyledFlicking = styled.div`
 
 function ProjectSlider() {
   const { isLoading, data: projects } = useGetProjects();
+  const [searchParams] = useSearchParams();
 
   if (isLoading) return <Spinner />;
+
+  //FILTER
+  const filterValue = searchParams.get("filter") || "all";
+  let filteredProjects;
+
+  if (filterValue === "all") filteredProjects = projects;
+  if (filterValue === "advanced")
+    filteredProjects = projects.filter(
+      (project) => project.difficultyLevel === "advanced"
+    );
+  if (filterValue === "intermediate")
+    filteredProjects = projects.filter(
+      (project) => project.difficultyLevel === "intermediate"
+    );
+  if (filterValue === "beginner")
+    filteredProjects = projects.filter(
+      (project) => project.difficultyLevel === "beginner"
+    );
 
   return (
     <StyledFlicking>
       <Flicking align="prev" circular={true} inputType={["touch", "mouse"]}>
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div key={index} className="project-container">
             <ProjectCard project={project} />
           </div>

@@ -23,7 +23,7 @@ const NavList = styled.ul`
   gap: 2em;
   padding-left: 5%;
   left: ${(props) => (props.menuopen === "true" ? "0" : "-100%")};
-  transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out, background-color 0.3s, border 0.3s;
 
   @media (min-width: 768px) {
     background-color: var(--background);

@@ -5,11 +5,10 @@ import ProjectSlider from "../features/ProjectSlider";
 import { useSearchParams } from "react-router-dom";
 
 const StyledProjectsContainer = styled.div`
-  background-color: var(--surface);
   color: var(--on-surface);
   padding: 1rem 2rem;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 function ProjectsContainer() {
