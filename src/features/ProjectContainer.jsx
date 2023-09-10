@@ -43,6 +43,7 @@ const StyledProjectContainer = styled.div`
   width: 100%;
   padding: 2rem 0rem;
   margin-top: 13rem;
+  position: relative;
 
   .image {
     width: 100%;

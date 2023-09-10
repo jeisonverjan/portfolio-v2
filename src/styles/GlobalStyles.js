@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --primary-variant: #dccfed;
     --secondary: #331c52;
     --background: #ffffff;
-    --surface: #e1ebed;
+    --surface: #ececec;
     --error: #b00020;
     --on-primary: #ffffff;
     --on-secondary: #ffffff;
@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle`
     --shadow-lg: 0 1.6rem 2.4rem -0.48rem rgba(0, 0, 0, 0.1),
     0 0.64rem 0.96rem -0.32rem rgba(0, 0, 0, 0.05);
 
+    --image-grayscale: 0;
+    --image-opacity: 100%;
+
     color-scheme: light;
   }
     
@@ -32,21 +35,24 @@ const GlobalStyles = createGlobalStyle`
   --primary-variant: #331c52;
   --secondary: #dccfed;
   --background: #291c3a;
-  --surface: #331c52;
+  --surface: #253034;
   --error: #cf6679;
   --on-primary: #ffffff;
   --on-secondary: #253034;
-  --on-background: #e1ebed;
-  --on-surface: #e1ebed;
+  --on-background: #ececec;
+  --on-surface: #ececec;
   --on-error: #242424;
-  --blue-thumb: #2187EC;
-  --red-heart: #E13C5C;
+  --blue-thumb: #1059A3;
+  --red-heart: #992A47;
 
   --shadow-sm: 0 0.16rem 0.32rem 0 rgba(255, 255, 255, 0.05);
   --shadow-md: 0 0.64rem 0.96rem -0.16rem rgba(255, 255, 255, 0.1),
     0 0.32rem 0.64rem -0.16rem rgba(255, 255, 255, 0.06);
   --shadow-lg: 0 1.6rem 2.4rem -0.48rem rgba(255, 255, 255, 0.1),
     0 0.64rem 0.96rem -0.32rem rgba(255, 255, 255, 0.05);
+
+    --image-grayscale: 20%;
+    --image-opacity: 90%;
 
     color-scheme: dark;
   }
@@ -68,6 +74,7 @@ html {
   font-size: 62.5%;
   min-height: 100dvh;
   background-color: lightblue;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -130,7 +137,7 @@ img {
   max-width: 100%;
 
   /* For dark mode */
-  //filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
 .active {

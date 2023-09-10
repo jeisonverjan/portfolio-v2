@@ -8,8 +8,12 @@ import ProjectLinks from "./ProjectLinks";
 const StyledProjectCard = styled.div`
   box-shadow: var(--shadow-lg);
   border-radius: 1rem;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 3rem auto auto auto;
 
   .image {
+    grid-row: 1;
     width: 100%;
     height: 20rem;
     transition: all 0.3s ease-in-out;

@@ -1,4 +1,5 @@
 import { ABOUT_ME } from "../utils/constants";
+import { RESUME_LINK } from "../utils/constants";
 import { styled } from "styled-components";
 import { FaLocationDot } from "react-icons/fa6";
 import { BsDownload } from "react-icons/bs";
@@ -108,10 +109,23 @@ function AboutMeContainer() {
         <img src="/public/aboutMe.png" alt="one and zero circle" />
       </div>
       <div className="buttons">
-        <ButtonLink text="Resume" type="primary" size="medium">
+        <ButtonLink
+          text="Resume"
+          type="primary"
+          size="medium"
+          href={RESUME_LINK}
+          target="_blank"
+          rel="noreferrer"
+        >
           <BsDownload />
         </ButtonLink>
-        <ButtonLink text="E-mail" type="primary" size="medium">
+
+        <ButtonLink
+          text="E-mail"
+          type="primary"
+          size="medium"
+          href="mailto:jeisonverjan@gmail.com"
+        >
           <MdEmail />
         </ButtonLink>
       </div>

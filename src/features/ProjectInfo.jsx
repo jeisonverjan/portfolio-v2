@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 const ProjectInfo = styled.div`
+  grid-row: 3;
   margin-top: 0.5rem;
   text-align: center;
   padding: 0rem 2rem;

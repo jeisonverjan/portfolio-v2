@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import SocialIcon from "../ui/SocialIcon";
 
 const StyledProjectReactions = styled.div`
+  grid-row: 5;
   display: flex;
   justify-content: flex-end;
   gap: 1.2rem;
@@ -17,18 +18,18 @@ const ReactionContainer = styled.div`
   color: var(--on-surface);
 `;
 
-function ProjectReactions({ loves, likes }) {
+function ProjectReactions({ loves, likes, projectId }) {
   return (
     <StyledProjectReactions>
       <ReactionContainer>
         <SocialIcon type="like" fontSize="1.5rem" padding="0.5rem" />
-        <span></span>
         <span>{likes}</span>
+        {/* <span>{isLiked === "true" ? " You like it!" : ""}</span> */}
       </ReactionContainer>
       <ReactionContainer>
         <SocialIcon type="love" fontSize="1.5rem" padding="0.5rem" />
-        <span></span>
         <span>{loves}</span>
+        {/* <span>{isLoved ? " You love it!" : ""}</span> */}
       </ReactionContainer>
     </StyledProjectReactions>
   );

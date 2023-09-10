@@ -6,7 +6,6 @@ export function useIncrementReaction() {
   const { isLoading, mutate: updateLoves } = useMutation({
     mutationFn: ({ projectId, type }) => incrementReaction(projectId, type),
     onSuccess: () => {
-      console.log("success!!!!!");
       queryClient.invalidateQueries({ active: true });
     },
   });

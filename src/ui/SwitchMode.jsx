@@ -37,7 +37,6 @@ const StyledSwitchMode = styled.div`
 `;
 
 function SwitchMode() {
-  //const [isDarkModeLocal, setIsDarkMode] = useState(false);
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
 

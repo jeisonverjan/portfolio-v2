@@ -12,6 +12,7 @@
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.11.0",
+    "@emailjs/browser": "^3.11.0",
     "@tanstack/react-query": "^4.35.0",
     "@tanstack/react-query-devtools": "^4.35.0",
     "firebase": "^10.3.1",

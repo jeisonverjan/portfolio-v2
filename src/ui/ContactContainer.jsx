@@ -1,8 +1,9 @@
+import React, { useRef } from "react";
 import { styled } from "styled-components";
-import ButtonLink from "./ButtonLink";
 import { TbMailForward } from "react-icons/tb";
+import { sentEmail } from "../utils/helpers";
 
-const StyledContactContainer = styled.form`
+const StyledContactContainer = styled.div`
   background-color: var(--surface);
   color: var(--on-surface);
   padding: 2rem;
@@ -53,8 +54,28 @@ const StyledContactContainer = styled.form`
     }
 
     .button {
-      display: flex;
-      height: 4rem;
+      button {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+        border: none;
+        background-color: var(--primary);
+        color: var(--on-primary);
+
+        span {
+          font-size: 2rem;
+        }
+        .icon {
+          font-size: 2.5rem;
+        }
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
     }
   }
 
@@ -75,25 +96,43 @@ const StyledContactContainer = styled.form`
 `;
 
 function ContactContainer() {
+  const form = useRef();
+  function sendEmail(e) {
+    e.preventDefault();
+    sentEmail(form);
+  }
   return (
     <StyledContactContainer>
       <h1>Contact</h1>
       <div className="container">
         <img src="/public/contactImg.png" alt="html label" />
-        <form>
-          <input type="text" placeholder="Full Name" required />
-          <input type="mail" placeholder="E-mail Address" required />
+
+        <form ref={form} onSubmit={sendEmail}>
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="user_name"
+            required
+          />
+          <input
+            type="mail"
+            placeholder="E-mail Address"
+            name="user_email"
+            required
+          />
           <input
             className="subject"
             type="text"
             placeholder="Subject"
+            name="user_subject"
             required
           />
-          <textarea placeholder="Message" required />
+          <textarea placeholder="Message" name="message" required />
           <div className="button">
-            <ButtonLink text="Send Message" type="primary" size="medium">
-              <TbMailForward />
-            </ButtonLink>
+            <button type="submit">
+              <TbMailForward className="icon" />
+              <span>Send Message</span>
+            </button>
           </div>
         </form>
       </div>

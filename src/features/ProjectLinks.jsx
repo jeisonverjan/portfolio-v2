@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import ButtonLink from "../ui/ButtonLink";
 
 const StyledProjectLinks = styled.div`
+  grid-row: 4;
   display: flex;
   padding: 2rem;
   justify-content: space-around;
