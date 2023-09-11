@@ -130,7 +130,7 @@ function ContactContainer() {
   return (
     <StyledContactContainer>
       <div className="container">
-        <img src="/public/contactImg.png" alt="html label" />
+        <img src="/contactImg.png" alt="html label" />
 
         <form ref={form} onSubmit={handleSubmit(onSubmit, onError)}>
           <h1>Contact</h1>

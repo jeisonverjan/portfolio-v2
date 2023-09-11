@@ -106,7 +106,7 @@ function AboutMeContainer() {
         <p>{ABOUT_ME}</p>
       </div>
       <div className="image">
-        <img src="/public/aboutMe.png" alt="one and zero circle" />
+        <img src="/aboutMe.png" alt="one and zero circle" />
       </div>
       <div className="buttons">
         <ButtonLink

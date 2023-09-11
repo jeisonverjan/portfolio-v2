@@ -118,7 +118,7 @@ function Main() {
       </div>
       <div className="profilePhoto">
         <div className="photo-bg"></div>
-        <img src="/public/profilePhotoMode.png" alt="portfolio owner" />
+        <img src="/profilePhotoMode.png" alt="portfolio owner" />
       </div>
       <div className="profession">
         <span>Full-Stack</span>
