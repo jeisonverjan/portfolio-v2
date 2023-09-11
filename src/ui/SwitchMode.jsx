@@ -30,7 +30,7 @@ const StyledSwitchMode = styled.div`
       height: 35px;
       border-radius: 100px;
       top: 4px;
-      left: ${(props) => (props.isdarkmode === "false" ? "5px" : "28px")};
+      left: ${(props) => (props.$isdarkmode === "false" ? "5px" : "28px")};
       transition: 0.4s;
     }
   }
@@ -39,9 +39,8 @@ const StyledSwitchMode = styled.div`
 function SwitchMode() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-
   return (
-    <StyledSwitchMode isdarkmode={String(isDarkMode)}>
+    <StyledSwitchMode $isdarkmode={String(isDarkMode)}>
       <input type="checkbox" id="btn-switch" onChange={toggleDarkMode} />
       <label htmlFor="btn-switch">
         <BsSun />

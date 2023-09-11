@@ -11,13 +11,13 @@ const ProjectInfo = styled.div`
   h1 {
     font-family: "Rubik";
     text-transform: uppercase;
-    font-size: ${(props) => props.fontSizeTitle || "2.5rem"};
+    font-size: ${(props) => props.$fontSizeTitle || "2.5rem"};
   }
   p {
     text-align: justify;
     font-weight: 600;
     font-family: inherit;
-    font-size: ${(props) => props.fontSizeText || "2rem"};
+    font-size: ${(props) => props.$fontSizeText || "2rem"};
   }
 `;
 

@@ -9,7 +9,6 @@ const StyledAppLayout = styled.div`
   max-width: 100%;
   min-height: 100dvh;
   max-height: 100dvh;
-  //overflow: hidden;
   grid-template:
     "header" 15rem
     "main" auto

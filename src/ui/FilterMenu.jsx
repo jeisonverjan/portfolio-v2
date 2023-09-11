@@ -16,7 +16,7 @@ const ButtonFilter = styled.button`
   text-transform: capitalize;
 
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       background-color: var(--primary);
       color: var(--on-primary);
@@ -40,7 +40,7 @@ function FilterMenu({ options, currentFilter }) {
       {options.map((option) => (
         <ButtonFilter
           key={option}
-          active={currentFilter === option}
+          $active={currentFilter === option}
           disabled={currentFilter === option}
           onClick={() => handleClick(option)}
         >

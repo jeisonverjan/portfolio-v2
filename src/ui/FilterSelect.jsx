@@ -70,11 +70,10 @@ function FilterSelect({ currentFilter, options }) {
           name="project-filter"
           id="filter-select"
           onChange={handleChange}
+          defaultValue={currentFilter}
         >
           {options.map((option) => (
-            <option key={option} selected={currentFilter === option}>
-              {option}
-            </option>
+            <option key={option}>{option}</option>
           ))}
         </select>
         <div className="icon-container">

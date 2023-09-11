@@ -42,7 +42,7 @@ function ProjectCard({ project }) {
         </a>
       </div>
       <SocialButtons projectId={project.id} />
-      <ProjectInfo fontSizeText="1.5rem">
+      <ProjectInfo $fontSizeText="1.5rem">
         <h1>{project.name}</h1>
         <TextReducer>{project.shortDescription}</TextReducer>
       </ProjectInfo>

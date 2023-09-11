@@ -88,9 +88,9 @@ body {
   
 }
 
-form {
+/* form {
   color-scheme: light;
-}
+} */
 
 input,
 button,

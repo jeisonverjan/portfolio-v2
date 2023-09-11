@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
-import FilterSelect from "./FilterSelect";
-import FilterMenu from "./FilterMenu";
 import { useSearchParams } from "react-router-dom";
 import { MdViewCarousel } from "react-icons/md";
 import { MdViewModule } from "react-icons/md";
+
+import FilterSelect from "./FilterSelect";
+import FilterMenu from "./FilterMenu";
 
 const StyledFilter = styled.div`
   display: flex;

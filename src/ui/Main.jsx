@@ -1,12 +1,14 @@
 import { styled } from "styled-components";
 import ContactIcons from "./ContactIcons";
+import ButtonProjects from "./ButtonProjects";
 
 const StyledMain = styled.main`
   display: grid;
   grid-template:
     "greeting greeting" 30%
     "profession photo"
-    "contactIcons photo" / 1fr 3fr;
+    "contactIcons photo"
+    "projects-button photo" / 1fr 3fr;
   background-color: var(--surface);
   color: var(--on-surface);
   height: 100%;
@@ -34,7 +36,6 @@ const StyledMain = styled.main`
   .profilePhoto {
     grid-area: photo;
     display: grid;
-    //justify-content: center;
     overflow: hidden;
     margin-top: -3rem;
     img {
@@ -42,7 +43,6 @@ const StyledMain = styled.main`
       height: 100%;
       background-color: transparent;
       filter: drop-shadow(0.2rem 0rem 0.3rem var(--primary));
-      //object-fit: cover;
     }
   }
 
@@ -64,7 +64,8 @@ const StyledMain = styled.main`
     grid-template:
       "greeting photo"
       "profession photo"
-      "contactIcons photo";
+      "contactIcons photo"
+      "projects-button photo";
     .profilePhoto {
       .photo-bg {
         width: 100%;
@@ -124,6 +125,7 @@ function Main() {
         <span>Developer</span>
       </div>
       <ContactIcons />
+      <ButtonProjects />
     </StyledMain>
   );
 }

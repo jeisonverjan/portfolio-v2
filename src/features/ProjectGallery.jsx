@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
+import { useSearchParams } from "react-router-dom";
+
+import Spinner from "../ui/Spinner";
 import ProjectCard from "./ProjectCard";
 import { useGetProjects } from "./useGetProjects";
-import Spinner from "../ui/Spinner";
-import { useSearchParams } from "react-router-dom";
 
 const StyledProjectGallery = styled.div`
   display: grid;

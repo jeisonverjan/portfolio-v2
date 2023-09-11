@@ -5,11 +5,11 @@ import { TiArrowBack } from "react-icons/ti";
 import SocialButtons from "../ui/SocialButtons";
 import TextReducer from "../ui/TextReducer";
 import SkillsIcons from "../ui/SkillsIcons";
+import Spinner from "../ui/Spinner";
 
 import ProjectReactions from "./ProjectReactions";
 import ProjectInfo from "./ProjectInfo";
 import { useGetProjectById } from "./useGetProjectById";
-import Spinner from "../ui/Spinner";
 
 const BackContainer = styled.div`
   display: flex;
@@ -116,7 +116,7 @@ function ProjectContainer() {
         </Button>
         <ProjectReactions likes={project.likes} loves={project.loves} />
       </BackContainer>
-      <ProjectInfo fontSizeTitle="3rem" fontSizeText="2rem">
+      <ProjectInfo $fontSizeTitle="3rem" $fontSizeText="2rem">
         <h1>{project.name}</h1>
         <TextReducer numberWords={15}>{project.description}</TextReducer>
       </ProjectInfo>

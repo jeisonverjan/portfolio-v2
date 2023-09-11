@@ -1,10 +1,10 @@
 import { useIncrementReaction } from "../features/useIncrementReaction";
+import { useState } from "react";
+
 import { styled } from "styled-components";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-
 import SocialIcon from "./SocialIcon";
-import { useState } from "react";
 
 const StyledSocialButtons = styled.div`
   grid-row: 2;

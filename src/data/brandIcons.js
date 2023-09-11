@@ -32,6 +32,8 @@ import {
   SiSupabase,
   SiReacthookform,
   SiStyledcomponents,
+  SiVisualstudiocode,
+  SiFigma,
 } from "react-icons/si";
 
 export const tagIcons = {
@@ -232,5 +234,17 @@ export const tagIcons = {
     label: "Styled Components",
     color: "#DB7093",
     link: "https://styled-components.com/docs",
+  },
+  visualstudiocode: {
+    tag: SiVisualstudiocode,
+    label: "Visual studio code",
+    color: "#007ACC",
+    link: "https://code.visualstudio.com/docs",
+  },
+  figma: {
+    tag: SiFigma,
+    label: "Figma",
+    color: "#F24E1E",
+    link: "https://help.figma.com/hc/en-us",
   },
 };

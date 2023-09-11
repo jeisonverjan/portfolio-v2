@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const StyledLogo = styled.span`
@@ -10,7 +11,11 @@ const StyledLogo = styled.span`
 `;
 
 function Logo() {
-  return <StyledLogo>&lt;jv&#47;&gt;</StyledLogo>;
+  return (
+    <Link to={"/"}>
+      <StyledLogo>&lt;jv&#47;&gt;</StyledLogo>
+    </Link>
+  );
 }
 
 export default Logo;

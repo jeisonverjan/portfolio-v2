@@ -22,7 +22,7 @@ const NavList = styled.ul`
   align-content: start;
   gap: 2em;
   padding-left: 5%;
-  left: ${(props) => (props.menuopen === "true" ? "0" : "-100%")};
+  left: ${(props) => (props.$menuopen === "true" ? "0" : "-100%")};
   transition: left 0.4s ease-in-out, background-color 0.3s, border 0.3s;
 
   @media (min-width: 768px) {
@@ -62,7 +62,7 @@ const NavIcon = styled.button`
 `;
 
 const Icon = styled.div`
-  opacity: ${(props) => (props.show === "true" ? 1 : 0)};
+  opacity: ${(props) => (props.$show === "true" ? 1 : 0)};
   transition: opacity 0.4s ease-in-out;
   grid-area: 1 / 1 / 2 / 2;
   color: var(--on-background);
@@ -77,7 +77,7 @@ function Nav() {
 
   return (
     <StyledNav>
-      <NavList menuopen={String(menuOpen)}>
+      <NavList $menuopen={String(menuOpen)}>
         <li>
           <StyledNavLink to="/" onClick={toggleMenu}>
             Home
@@ -100,10 +100,10 @@ function Nav() {
         </li>
       </NavList>
       <NavIcon onClick={toggleMenu}>
-        <Icon show={String(!menuOpen)}>
+        <Icon $show={String(!menuOpen)}>
           <AiOutlineMenu />
         </Icon>
-        <Icon show={String(menuOpen)}>
+        <Icon $show={String(menuOpen)}>
           <AiOutlineClose />
         </Icon>
       </NavIcon>

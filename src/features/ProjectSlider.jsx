@@ -1,10 +1,11 @@
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 import { styled } from "styled-components";
+import { useSearchParams } from "react-router-dom";
+
 import ProjectCard from "./ProjectCard";
 import { useGetProjects } from "./useGetProjects";
 import Spinner from "../ui/Spinner";
-import { useSearchParams } from "react-router-dom";
 
 const StyledFlicking = styled.div`
   width: 100%;
