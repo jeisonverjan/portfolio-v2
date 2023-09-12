@@ -29,9 +29,11 @@ const Box = styled.div`
 
   .title-box {
     display: flex;
-    line-height: 0;
+    flex-wrap: wrap;
+    line-height: 1;
     align-items: center;
     gap: 2rem;
+    text-align: center;
 
     .icon {
       font-size: 8rem;
@@ -47,7 +49,7 @@ function PageNotFound() {
       <Box>
         <div className="title-box">
           <BiCommentX className="icon" />
-          <h1>The page you are looking for could not be found</h1>
+          <h1>The page you are looking for could not be found!</h1>
         </div>
         <div className="button-box">
           <ButtonLink
