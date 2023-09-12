@@ -73,7 +73,6 @@ const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
   min-height: 100dvh;
-  background-color: lightblue;
   scroll-behavior: smooth;
 }
 
@@ -83,9 +82,7 @@ body {
   transition: color 0.3s, background-color 0.3s;
   min-height: 100dvh;
   line-height: 1.5;
-  font-size: 1.6rem;
-  background-color: lightgreen;
-  
+  font-size: 1.6rem;  
 }
 
 /* form {

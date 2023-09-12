@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import PageNotFound from "./pages/PageNotFound";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,6 +37,7 @@ function App() {
               <Route path="contact" element={<Contact />} />
             </Route>
             <Route path="projects/:projectId" element={<Project />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
         <Toaster
